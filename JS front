@@ -1,5 +1,5 @@
 (function () {
-  const frontcnv = document.querySelector('canvas');
+  const frontcnv = document.querySelector('#frontcnv');
 
   const frontctx = frontcnv.getContext('2d');
 
@@ -19,7 +19,7 @@
     bgfillColor: 'rgba(50, 50, 50, 0.05)',
     dirsCount  : 6,
     stepsToTurn: 8,
-    dotSize    : 2,
+    dotSize    : 4,
     dotsCount  : 300,
     dotVelocity: 3,
     distance   : 70,
