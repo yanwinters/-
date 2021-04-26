@@ -1,5 +1,5 @@
 (function () {
-  const leftcnv = document.querySelector('canvas');
+  const leftcnv = document.querySelector('#leftcnv');
 
   const leftctx = leftcnv.getContext('2d');
 
@@ -17,11 +17,11 @@
   const cfg = {
     hue        :0,
     bgfillColor: 'rgba(50, 50, 50, 0.05)',
-    dirsCount  : 6,
-    stepsToTurn: 8,
-    dotSize    : 2,
+    dirsCount  : 9,
+    stepsToTurn: 20,
+    dotSize    : 4,
     dotsCount  : 300,
-    dotVelocity: 3,
+    dotVelocity: 1,
     distance   : 70,
   }
 
@@ -61,7 +61,7 @@
     }
 
     killDot(id) {
-      let percent = Math.exp(8 * this.step / cfg.distance);
+      let percent = Math.exp(4 * this.step / cfg.distance);
       if (percent > 100) {
         dotsList.splice(id, 1);
       }
