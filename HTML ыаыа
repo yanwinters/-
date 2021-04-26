@@ -7,29 +7,35 @@
   <link rel="stylesheet" href="ky6.component.css">
 </head>
 <body>
+  <div class="background" id="background"></div>
+  <script src="three.min.js"></script>
+  <script src="vanta.halo.min.js"></script>
+  <script src="ky6.component.background.js"></script>
   <div class="wrap">
     <div class="cube">
       <div id="front">
-        <!--Короче если удалить отсюда-->
         <canvas id="frontcnv"></canvas>
         <script src="ky6.component.front.js"></script>
-        <!--до сюда, то все будет ок, и анимация будет на одной грани-->
       </div>
       <div id="left">
         <canvas id="leftcnv"></canvas>
         <script src="ky6.component.left.js"></script>
       </div>
-      <div id="back">
-        Back side
-      </div>
-      <div id="top">
-        Top side
+      <div id="right">
+        <canvas id="rightcnv"></canvas>
+        <script src="ky6.component.right.js"></script>
       </div>
       <div id="bottom">
-        Bottom side
+        <canvas id="bottomcnv"></canvas>
+        <script src="ky6.component.bottom.js"></script>
       </div>
-      <div id="right">
-        Right side
+      <div id="back">
+        <canvas id="backcnv"></canvas>
+        <script src="ky6.component.back.js"></script>
+      </div>
+      <div id="top">
+        <canvas id="topcnv"></canvas>
+        <script src="ky6.component.top.js"></script>
       </div>
     </div>
   </div>
