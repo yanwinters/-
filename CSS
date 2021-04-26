@@ -1,8 +1,9 @@
 body {
-  background-color: white;
   margin: 0;
   padding: 0;
 }
+
+
 
 .wrap {
   margin-top: 200px;
@@ -31,7 +32,22 @@ body {
 
 #rightcnv {
   height: 195px;
-  width: 301px;
+  width: 242px;
+}
+
+#bottomcnv {
+  height: 195px;
+  width: 242px;
+}
+
+#topcnv {
+  height: 195px;
+  width: 242px;
+}
+
+#backcnv {
+  height: 195px;
+  width: 242px;
 }
 
 .cube > div {
@@ -115,4 +131,3 @@ body {
 .cube > div {
   transition: transform 0.4s ease-in;
 }
-
