@@ -9,7 +9,7 @@
     cw = document.getElementById('topcnv').clientWidth;
     ch = document.getElementById('topcnv').clientHeight;
     cx = cw / 2;
-    cy = ch / 2.5;
+    cy = ch / 2.6;
   }
 
   resizeCanvas();
@@ -17,11 +17,11 @@
   const cfg = {
     hue        :0,
     bgfillColor: 'rgba(50, 50, 50, 0.05)',
-    dirsCount  : 6,
-    stepsToTurn: 8,
+    dirsCount  : 23,
+    stepsToTurn: 1,
     dotSize    : 4,
     dotsCount  : 300,
-    dotVelocity: 3,
+    dotVelocity: 2,
     distance   : 70,
   }
 
@@ -40,7 +40,7 @@
     }
 
     redrawDot() {
-      let color = 'brown';
+      let color = 'yellow';
       let size = cfg.dotSize;
       let x = this.pos.x - size / 2;
       let y = this.pos.y - size / 2;
@@ -61,7 +61,7 @@
     }
 
     killDot(id) {
-      let percent = Math.exp(8 * this.step / cfg.distance);
+      let percent = Math.exp(5 * this.step / cfg.distance);
       if (percent > 100) {
         dotsList.splice(id, 1);
       }
