@@ -3,8 +3,6 @@ body {
   padding: 0;
 }
 
-
-
 .wrap {
   margin-top: 200px;
   perspective: 1000px;
@@ -25,9 +23,31 @@ body {
   width: 242px;
 }
 
+#fronttext {
+  cursor: crosshair;
+  -webkit-transition-duration: 1s;
+  color: blue;
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 18px;
+  text-align: center;
+  opacity: 0;
+}
+
 #leftcnv {
   height: 195px;
   width: 301px;
+}
+
+#lefttext {
+  cursor: crosshair;
+  -webkit-transition-duration: 1s;
+  color: #EEC169;
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 0px;
+  text-align: center;
+  opacity: 0;
 }
 
 #rightcnv {
@@ -35,14 +55,49 @@ body {
   width: 242px;
 }
 
+#righttext {
+  transform: rotate(180deg);
+  cursor: crosshair;
+  -webkit-transition-duration: 1s;
+  color: slategrey;
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 18px;
+  text-align: center;
+  opacity: 0;
+}
+
 #bottomcnv {
   height: 195px;
   width: 242px;
 }
 
+#bottomtext {
+  cursor: crosshair;
+  -webkit-transition-duration: 1s;
+  color: red;
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 55px;
+  text-align: center;
+  opacity: 0;
+}
+
 #topcnv {
   height: 195px;
   width: 242px;
+}
+
+#toptext {
+  transform: rotate(180deg);
+  cursor: crosshair;
+  -webkit-transition-duration: 1s;
+  color: yellow;
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 50px;
+  text-align: center;
+  opacity: 0;
 }
 
 #backcnv {
@@ -108,6 +163,10 @@ body {
   transform: translateZ(100px);
 }
 
+#fronttext:hover {
+  opacity: 1;
+}
+
 .wrap:hover #back {
   transform: translateZ(-300px) rotateY(180deg);
 }
@@ -116,16 +175,32 @@ body {
   transform: rotateY(-270deg) translateZ(100px) translateX(200px);
 }
 
+#righttext:hover {
+  opacity: 1;
+}
+
 .wrap:hover #left {
   transform: rotateY(270deg) translateZ(100px) translateX(-200px);
+}
+
+#lefttext:hover {
+  opacity: 1;
 }
 
 .wrap:hover #top {
   transform: rotateX(-270deg) translateZ(100px) translateY(-200px);
 }
 
+#toptext:hover {
+  opacity: 1;
+}
+
 .wrap:hover #bottom {
   transform: rotateX(270deg) translateZ(100px) translateY(200px);
+}
+
+#bottomtext:hover {
+  opacity: 1;
 }
 
 .cube > div {
