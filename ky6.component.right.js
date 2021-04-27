@@ -21,7 +21,7 @@
     stepsToTurn: 1,
     dotSize    : 4,
     dotsCount  : 300,
-    dotVelocity: 2,
+    dotVelocity: 0.5,
     distance   : 70,
   }
 
@@ -40,7 +40,7 @@
     }
 
     redrawDot() {
-      let color = 'green';
+      let color = 'gray';
       let size = cfg.dotSize;
       let x = this.pos.x - size / 2;
       let y = this.pos.y - size / 2;
@@ -61,7 +61,7 @@
     }
 
     killDot(id) {
-      let percent = Math.exp(5 * this.step / cfg.distance);
+      let percent = Math.exp(2 * this.step / cfg.distance);
       if (percent > 100) {
         dotsList.splice(id, 1);
       }
